@@ -1,20 +1,14 @@
 # AI Analyzer - Resume & Job Application Management System
 
-<div align="center">
-  <img src="public/readme/hero.webp" alt="AI Analyzer Banner" width="800"/>
-  
-  <p align="center">
-    <strong>An intelligent resume analysis and job application tracking platform powered by AI</strong>
-  </p>
+**An intelligent resume analysis and job application tracking platform powered by AI**
 
-  <div>
-    <img alt="React" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black">
-    <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
-    <img alt="React Router" src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white">
-    <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white">
-    <img alt="Puter.js" src="https://img.shields.io/badge/Puter.js-181758?style=for-the-badge&logoColor=white">
-  </div>
-</div>
+Built with React, TypeScript, and modern web technologies to help job seekers optimize their resumes and manage their application process efficiently.
+
+## 💡 Project Motivation
+
+As a developer, I noticed the challenges job seekers face in optimizing their resumes for different positions and keeping track of multiple applications. This project combines AI-powered resume analysis with comprehensive job application management to create a complete job search toolkit.
+
+The application leverages modern web technologies and AI to provide actionable insights while maintaining a clean, user-friendly interface that makes job searching more organized and effective.
 
 ## 📋 Table of Contents
 
@@ -60,12 +54,12 @@
 - **Error Handling**: Comprehensive error handling with user-friendly messages
 - **Accessibility**: Built with accessibility best practices
 
-## 🚀 Demo
+## 🚀 Live Demo
 
-🔗 **Live Demo**: [AI Analyzer](https://your-demo-link.com) *(Replace with your deployed URL)*
+**🔗 [Try AI Analyzer Live](https://ai-job-analyzer-mu.vercel.app/)**
 
 ### Quick Start
-1. Visit the demo link
+1. Visit the live application
 2. Sign in with Puter authentication
 3. Upload a resume to get AI-powered feedback
 4. Add job applications to track your progress
@@ -80,13 +74,13 @@
 - **[Zustand](https://github.com/pmndrs/zustand)** - Lightweight state management
 
 ### Backend & Services
-- **[Puter.js](https://puter.com/)** - Serverless backend with AI, storage, and auth
-- **[PDF.js](https://mozilla.github.io/pdf.js/)** - PDF processing and text extraction
+- **[Puter.js](https://puter.com/)** - Serverless backend with AI, storage, and authentication
+- **PDF Processing** - Built-in PDF text extraction and analysis capabilities
 
-### Development Tools
-- **[Vite](https://vite.dev/)** - Fast build tool and dev server
-- **[ESLint](https://eslint.org/)** - Code linting
-- **[Prettier](https://prettier.io/)** - Code formatting
+### Development & Deployment
+- **[Vite](https://vite.dev/)** - Fast build tool and development server
+- **[Vercel](https://vercel.com/)** - Deployment and hosting platform
+- **TypeScript** - Enhanced development experience with type safety
 
 ## 📦 Installation
 
@@ -164,13 +158,22 @@ yarn typecheck
 - Access your data from any device after signing in
 - Use the "Wipe" feature to clear all data if needed
 
-## 📱 Screenshots
+## 📱 Application Features
 
-<div align="center">
-  <img src="public/images/resume_01.png" alt="Resume Analysis" width="300"/>
-  <img src="public/images/resume_02.png" alt="Job Dashboard" width="300"/>
-  <img src="public/images/resume_03.png" alt="Application Form" width="300"/>
-</div>
+### Resume Analysis Dashboard
+- Upload PDF resumes and get instant AI feedback
+- View detailed scores for ATS compatibility, content quality, and structure
+- Get actionable suggestions for improvement
+
+### Job Application Tracker
+- Comprehensive dashboard showing application statistics
+- Track applications across different stages (Applied, Interviewing, Rejected, Accepted)
+- Manage job details including company, position, location, and descriptions
+
+### User Interface
+- Clean, modern design optimized for productivity
+- Responsive layout that works on all devices
+- Intuitive navigation and user-friendly forms
 
 ## 🏗️ Project Structure
 
@@ -244,26 +247,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Anurag Singh**
 - GitHub: [@Anurag03singh](https://github.com/Anurag03singh)
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
-- Email: your.email@example.com
+- Portfolio: [AI Analyzer](https://ai-job-analyzer-mu.vercel.app/)
+- Project Repository: [Ai-Job-Analyzer](https://github.com/Anurag03singh/Ai-Job-Analyzer)
 
 ---
 
-<div align="center">
-  <p>⭐ Star this repository if you found it helpful!</p>
-  <p>🔗 <a href="https://github.com/Anurag03singh/Ai-Job-Analyzer">View on GitHub</a></p>
-</div>
+**⭐ Star this repository if you found it helpful!**
 
-## 🙏 Acknowledgments
+**🔗 [Live Application](https://ai-job-analyzer-mu.vercel.app/) | [GitHub Repository](https://github.com/Anurag03singh/Ai-Job-Analyzer)**
 
-- [Puter.js](https://puter.com/) for providing the serverless backend platform
-- [React Router](https://reactrouter.com/) for the excellent routing solution
-- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
-- [Zustand](https://github.com/pmndrs/zustand) for lightweight state management
-- The open-source community for inspiration and resources
+## 🔮 Future Enhancements
+
+- **Resume Templates**: Pre-built resume templates for different industries
+- **Interview Preparation**: AI-generated interview questions based on job descriptions
+- **Application Reminders**: Automated follow-up reminders for pending applications
+- **Analytics Dashboard**: Advanced insights into application success rates
+- **Resume Comparison**: Side-by-side comparison of multiple resume versions
 
 ---
 
-<div align="center">
-  <sub>Built with ❤️ by <a href="https://github.com/Anurag03singh">Anurag Singh</a></sub>
-</div>
+*Built with ❤️ by [Anurag Singh](https://github.com/Anurag03singh)*
