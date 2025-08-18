@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
 import type { Route } from "./+types/jobs";
 import Navbar from "~/components/Navbar";
 import JobCard from "~/components/JobCard";
 import JobForm from "~/components/JobForm";
 import { useJobStore } from "~/lib/jobStore";
-import { usePuterStore } from "~/lib/puter";
 
 export function meta({}: Route.MetaArgs) {
     return [
@@ -15,8 +13,6 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Jobs() {
-    const navigate = useNavigate();
-    const { auth } = usePuterStore();
     const { jobs, isLoading, error, loadJobs, addJob, updateJob, deleteJob, clearError } = useJobStore();
     
     const [showForm, setShowForm] = useState(false);
@@ -24,12 +20,8 @@ export default function Jobs() {
     const [sortBy, setSortBy] = useState<"date" | "status">("date");
 
     useEffect(() => {
-        if (!auth.isAuthenticated) {
-            navigate('/auth?next=/jobs');
-            return;
-        }
         loadJobs();
-    }, [auth.isAuthenticated]);
+    }, []);
 
     const handleAddJob = async (jobData: JobFormData) => {
         await addJob(jobData);
@@ -62,26 +54,22 @@ export default function Jobs() {
         if (sortBy === "date") {
             return new Date(b.dateApplied).getTime() - new Date(a.dateApplied).getTime();
         } else {
-            const statusOrder = { "Interviewing": 0, "Applied": 1, "Accepted": 2, "Rejected": 3 };
+            const statusOrder: Record<JobApplication['status'], number> = { "Interviewing": 0, "Applied": 1, "Accepted": 2, "Rejected": 3 };
             return statusOrder[a.status] - statusOrder[b.status];
         }
     });
 
     const getJobStats = () => {
         const total = jobs.length;
-        const applied = jobs.filter(job => job.status === "Applied").length;
-        const interviewing = jobs.filter(job => job.status === "Interviewing").length;
-        const accepted = jobs.filter(job => job.status === "Accepted").length;
-        const rejected = jobs.filter(job => job.status === "Rejected").length;
+        const applied = jobs.filter((job: JobApplication) => job.status === "Applied").length;
+        const interviewing = jobs.filter((job: JobApplication) => job.status === "Interviewing").length;
+        const accepted = jobs.filter((job: JobApplication) => job.status === "Accepted").length;
+        const rejected = jobs.filter((job: JobApplication) => job.status === "Rejected").length;
 
         return { total, applied, interviewing, accepted, rejected };
     };
 
     const stats = getJobStats();
-
-    if (!auth.isAuthenticated) {
-        return null;
-    }
 
     return (
         <main className="bg-[url('/images/bg-main.svg')] bg-cover min-h-screen">
